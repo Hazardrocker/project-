@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Railway Reservation System</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Trains</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="booking-form">
+            <h2>Book Your Train</h2>
+            <form id="reservation-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="train">Train:</label>
+                <select id="train" name="train" required>
+                    <option value="express">Express</option>
+                    <option value="superfast">Superfast</option>
+                    <option value="intercity">Intercity</option>
+                </select>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="class">Class:</label>
+                <select id="class" name="class" required>
+                    <option value="sleeper">Sleeper</option>
+                    <option value="ac">AC</option>
+                    <option value="first-class">First Class</option>
+                </select>
+
+                <button type="button" onclick="submitForm()">Book Now</button>
+            </form>
+        </section>
+        <section id="confirmation" class="hidden">
+            <h2>Booking Confirmation</h2>
+            <p id="confirmation-details"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Railway Reservation System</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
